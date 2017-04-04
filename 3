@@ -1,0 +1,17 @@
+#coding:utf-8
+import random
+poker=range(1,55)#1到54，代表54张牌
+a=random.sample(poker,17)#玩家a的牌
+print a
+for i in a:
+    poker.remove(i)
+b=random.sample(poker,17)#玩家b的牌
+print b
+for j in b:
+    poker.remove(j)
+c=random.sample(poker,17)#玩家c的牌
+print c
+for k in c:
+    poker.remove(k)
+leave=poker#剩余的牌
+print leave

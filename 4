@@ -1,0 +1,32 @@
+# #coding:utf-8
+# import random
+# money=int(raw_input('总金额:'))
+# man=int(raw_input('总人数:'))
+# def weixinhongba(money,man):
+#     j = []
+#     k = 0
+#     while k<man:
+#         a=random.uniform(1,money-（4-）)
+#         j.append(a)
+#         money=money-a
+#         k=k+1
+#     j.append(money)
+#     print j
+# weixinhongba(money,man),上方部分为我自己写的答案，和微信上的答案略有出入，我的答案输出的小数位数比较多，没有微信上的
+# 严谨答案
+import random
+def redPacket(people, money):
+    result = []
+    remain = people
+    for i in range(people):
+        remain -= 1
+        if remain > 0:
+            m = random.randint(1, money - remain)
+        else:
+            m = money
+        money -= m
+        result.append(m / 100.0)
+    print result
+people = int(input('红包个数:\n'))
+money = int(input('总金额:\n') * 100)
+redPacket(people, money)

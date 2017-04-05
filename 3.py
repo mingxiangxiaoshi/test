@@ -1,6 +1,13 @@
 #coding:utf-8
 import random
-poker=range(1,55)#1到54，代表54张牌
+poker=[]
+num=range(1,14)
+color=['rpeach','block','flower','bpeach']
+for i in num:
+    for j in color:
+        k=str(i)+j
+        poker.append(k)
+poker+=('Joker','joker')
 a=random.sample(poker,17)#玩家a的牌
 print a
 for i in a:
